@@ -1,0 +1,11 @@
+# Нормалізація кінців рядків, щоб файли однаково виглядали на Windows/Linux.
+* text=auto eol=lf
+
+*.ps1 text eol=crlf
+*.bat text eol=crlf
+*.sh text eol=lf
+
+*.png binary
+*.jpg binary
+*.crt binary
+*.key binary

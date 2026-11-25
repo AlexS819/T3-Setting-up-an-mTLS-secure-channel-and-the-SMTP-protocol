@@ -1,0 +1,44 @@
+﻿?   	secure-alert-gateway/cmd/agent	[no test files]
+?   	secure-alert-gateway/cmd/devsmtp	[no test files]
+?   	secure-alert-gateway/cmd/gateway	[no test files]
+?   	secure-alert-gateway/cmd/gencerts	[no test files]
+?   	secure-alert-gateway/internal/devsmtp	[no test files]
+?   	secure-alert-gateway/internal/pki	[no test files]
+=== RUN   TestMTLSFlow
+--- PASS: TestMTLSFlow (0.53s)
+=== RUN   TestClientWithoutCertificateRejected
+    gateway_test.go:166: рукостискання відхилено, як і очікувалось: remote error: tls: certificate required
+--- PASS: TestClientWithoutCertificateRejected (0.43s)
+=== RUN   TestClientFromForeignCARejected
+    gateway_test.go:211: клієнт зі стороннім CA відхилений: remote error: tls: unknown certificate authority
+--- PASS: TestClientFromForeignCARejected (1.36s)
+=== RUN   TestPlainTCPRejected
+--- PASS: TestPlainTCPRejected (0.32s)
+PASS
+ok  	secure-alert-gateway/internal/gateway	2.662s
+=== RUN   TestBuildMIME
+--- PASS: TestBuildMIME (0.13s)
+=== RUN   TestBuildMIMEWithoutAttachment
+--- PASS: TestBuildMIMEWithoutAttachment (0.00s)
+=== RUN   TestBuildMIMEValidatesInput
+=== RUN   TestBuildMIMEValidatesInput/порожній_список_отримувачів
+=== RUN   TestBuildMIMEValidatesInput/некоректний_отримувач
+=== RUN   TestBuildMIMEValidatesInput/порожнє_тіло
+=== RUN   TestBuildMIMEValidatesInput/ін'єкція_заголовка_в_тему
+=== RUN   TestBuildMIMEValidatesInput/ін'єкція_у_назву_вкладення
+--- PASS: TestBuildMIMEValidatesInput (0.00s)
+    --- PASS: TestBuildMIMEValidatesInput/порожній_список_отримувачів (0.00s)
+    --- PASS: TestBuildMIMEValidatesInput/некоректний_отримувач (0.00s)
+    --- PASS: TestBuildMIMEValidatesInput/порожнє_тіло (0.00s)
+    --- PASS: TestBuildMIMEValidatesInput/ін'єкція_заголовка_в_тему (0.00s)
+    --- PASS: TestBuildMIMEValidatesInput/ін'єкція_у_назву_вкладення (0.00s)
+=== RUN   TestSendToDevSMTP
+--- PASS: TestSendToDevSMTP (0.00s)
+=== RUN   TestSendRejectsPasswordWithoutTLS
+--- PASS: TestSendRejectsPasswordWithoutTLS (0.00s)
+PASS
+ok  	secure-alert-gateway/internal/mailer	0.151s
+=== RUN   TestNotifySendsHTMLAndAttachment
+--- PASS: TestNotifySendsHTMLAndAttachment (0.12s)
+PASS
+ok  	secure-alert-gateway/internal/notify	0.133s

@@ -1,0 +1,5 @@
+=== devsmtp: локальний SMTP-емулятор на 127.0.0.1:1025 ===
+Листи зберігаються у: tmp\mail
+Ctrl+C — зупинити.
+2026/11/25 22:51:47 [DEVSMTP] Прийнято лист від <alerts@internal.net> до [duty-engineer@internal.net] (7203 байт)
+2026/11/25 22:51:47 [DEVSMTP] Збережено: tmp\mail\20261125-225147.288.eml
